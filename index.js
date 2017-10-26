@@ -11,7 +11,12 @@ function Flatiron (inputTree, options) {
   if (!(this instanceof Flatiron)) return new Flatiron(inputTree, options);
 
   this.inputTree = inputTree;
-  this.options = options;
+  this.options = {
+    trimExtensions: Boolean(options.trimExtensions),
+    prefix: options.prefix === undefined ? "export default " : String(options.prefix),
+    suffix: options.suffix === undefined ? ';' : String(options.suffix),
+    outputFile: options.outputFile
+  };
 }
 
 Flatiron.prototype.write = function (readTree, destDir) {
@@ -36,8 +41,7 @@ Flatiron.prototype.write = function (readTree, destDir) {
       return obj;
     }
 
-    output = "export default " + JSON.stringify(obj, null, 2);
-
+    output = _this.options.prefix + JSON.stringify(obj, null, 2) + _this.options.suffix;
     mkdirp.sync(path.join(destDir, path.dirname(_this.options.outputFile)));
     fs.writeFileSync(path.join(destDir, _this.options.outputFile), output);
   });
