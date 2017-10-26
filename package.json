@@ -1,6 +1,6 @@
 {
   "name": "broccoli-flatiron",
-  "version": "0.0.0",
+  "version": "0.1.1",
   "description": "Broccoli plugin to create json objects from directory structures",
   "main": "index.js",
   "author": "Jan Buschtöns",
@@ -18,14 +18,14 @@
     "javascript"
   ],
   "dependencies": {
-    "broccoli-writer": "~0.1.1",
     "broccoli-kitchen-sink-helpers": "~0.2.4",
+    "broccoli-writer": "~0.1.1",
     "mkdirp": "^0.3.5",
     "rsvp": "~3.0.6"
   },
   "devDependencies": {
-    "mocha": "~1.18.2",
     "broccoli": "~0.12.3",
-    "expect.js": "~0.3.1"
+    "expect.js": "~0.3.1",
+    "mocha": "~1.18.2"
   }
 }
