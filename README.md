@@ -14,6 +14,8 @@ var tree = flatiron(targetDirectory);
 
 - `option.outputFile`
 - `option.trimExtensions`
+- `option.prefix`
+- `option.suffix`
 
 ## ZOMG!!! TESTS?!?!!?
 
