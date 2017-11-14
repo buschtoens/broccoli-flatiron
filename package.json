@@ -1,6 +1,6 @@
 {
   "name": "broccoli-flatiron",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Broccoli plugin to create json objects from directory structures",
   "main": "index.js",
   "author": "Jan Buschtöns",
