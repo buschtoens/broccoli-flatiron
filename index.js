@@ -31,7 +31,7 @@ Flatiron.prototype.write = function (readTree, destDir) {
           entries = fs.readdirSync(srcDir);
 
       Array.prototype.forEach.call(entries, function(entry) {
-        if (fs.lstatSync(path.join(srcDir, entry)).isDirectory())
+        if (fs.statSync(path.join(srcDir, entry)).isDirectory())
           obj[entry] = readDirectory(path.join(srcDir, entry));
         else
           obj[_this.options.trimExtensions ? entry.split(".")[0] : entry] =
