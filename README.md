@@ -19,7 +19,7 @@ var tree = flatiron(targetDirectory);
 
 ## ZOMG!!! TESTS?!?!!?
 
-Yeah, no. Not now. But when I finally add some, you can run them like so:
+Yeah, I know.
 
 ```javascript
 npm install
