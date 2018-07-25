@@ -7,15 +7,19 @@ Create a payload file based upon directory structure.
 ```javascript
 var flatiron = require("broccoli-flatiron");
 
-var tree = flatiron(targetDirectory);
+var options = {
+    outputFile: 'path/to/output/file'
+};
+
+var tree = flatiron(targetDirectory, options);
 ```
 
 ## Documentation
 
-- `option.outputFile`
-- `option.trimExtensions`
-- `option.prefix`
-- `option.suffix`
+- `option.outputFile` - path of the generated file
+- `option.trimExtensions` - trim file extensions object keys or not
+- `option.prefix` - use custom prefix, `default: export default`
+- `option.suffix` - use custom suffix, `default: ;`
 
 ## ZOMG!!! TESTS?!?!!?
 

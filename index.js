@@ -2,7 +2,6 @@ var fs = require('fs'),
     path = require('path'),
     mkdirp = require('mkdirp'),
     Plugin = require('broccoli-plugin');
-    Promise = require('rsvp').Promise;
 
 Flatiron.prototype = Object.create(Plugin.prototype);
 Flatiron.prototype.constructor = Flatiron;
