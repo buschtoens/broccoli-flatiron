@@ -1,5 +1,26 @@
 # Broccoli Flatiron
 
+## :warning: Package is Deprecated :warning:
+
+This package is deprecated. Use [**`broccoli-merge-files`**][broccoli-merge-files] instead.
+
+```js
+const BroccoliMergeFiles = require('broccoli-merge-files');
+const flatiron = require('broccoli-merge-files/flatiron');
+
+new BroccoliMergeFiles([inputNode], {
+  merge: files =>
+    flatiron(files, {
+      // trimExtensions: false,
+      // prefix: 'export default ',
+      // suffix: ';'
+    }),
+  outputFileName: 'files.js'
+});
+```
+
+[broccoli-merge-files]: https://github.com/buschtoens/broccoli-merge-files
+
 ## Usage
 
 Create a payload file based upon directory structure.
